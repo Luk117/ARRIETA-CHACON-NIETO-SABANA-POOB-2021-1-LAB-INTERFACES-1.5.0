@@ -5,16 +5,22 @@
 ## Parte I - Entendiendo las Interfaces `Shapes`
 
 Circle Class
+
+
 ![img_18.png](img_18.png)
 
 Circle Test
+
+
 ![img_19.png](img_19.png)
 
 Cylinder class
 
+
 ![img_16.png](img_16.png)
 
 Cylinder Test
+
 
 ![img_17.png](img_17.png)
 
@@ -111,6 +117,12 @@ Clase Cube
 
  
 ## Parte V - Interfaces Integrando
+
+![img_21.png](img_21.png)
+
+![img_22.png](img_22.png)
+
+![img_23.png](img_23.png)
 
 
 

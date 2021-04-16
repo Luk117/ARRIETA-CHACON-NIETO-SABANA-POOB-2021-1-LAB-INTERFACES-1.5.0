@@ -1,10 +1,14 @@
 package edu.sabana.poob.sabanapayroll;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public abstract class BankAccount {
 
     public static final int TAX_4_1000 = 4;
 
     private double balance;
+    protected UUID idEmployee;
 
     /**
      * Inicializa una cuenta.
@@ -14,7 +18,7 @@ public abstract class BankAccount {
     }
 
     /**
-     * Obtiene el porcentaje del deposito.
+     *Obtiene el porcentaje del deposito.
      *
      * @return
      */
@@ -31,8 +35,21 @@ public abstract class BankAccount {
      * @param amount El monto a depositar.
      * @return Si la operación fue exitosa.
      */
+
+    public UUID getEmployee() {
+        return idEmployee;
+    }
+
     public boolean deposit(double amount) {
-        return false;
+        boolean result = false;
+
+        if (amount>getDepositDiscount())
+        {
+            result=true;
+            this.balance=this.balance+amount-getDepositDiscount();
+        }
+
+        return result;
     }
 
     /**
@@ -47,7 +64,11 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean withdraw(double amount) {
-        return false;
+        if (amount * (1 + TAX_4_1000/1000.0) < getBalance()) {
+            return false;
+        }
+        balance -= amount * (1 + TAX_4_1000/1000.0);
+        return true;
     }
 
     /**
@@ -59,10 +80,12 @@ public abstract class BankAccount {
         return balance;
     }
 
-    private void setBalance(double balance) throws Exception {
+    public void setBalance(double balance) throws Exception {
         if (balance < 0)
             throw new Exception("Error en el deposito");
 
         this.balance = balance;
     }
 }
+
+
