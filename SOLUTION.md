@@ -4,6 +4,20 @@
 
 ## Parte I - Entendiendo las Interfaces `Shapes`
 
+circle hereda de la super clase shape
+
+
+Cylinder y shape es de herencia, ya que cylinder hereda de la clasecircle y circle hereda de shape.
+
+
+Circle es una geometricshape2D
+
+
+Cylinder es una geometricshape3D
+
+
+
+
 Circle Class
 
 
