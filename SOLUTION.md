@@ -4,7 +4,19 @@
 
 ## Parte I - Entendiendo las Interfaces `Shapes`
 
+Circle Class
+![img_18.png](img_18.png)
 
+Circle Test
+![img_19.png](img_19.png)
+
+Cylinder class
+
+![img_16.png](img_16.png)
+
+Cylinder Test
+
+![img_17.png](img_17.png)
 
 
 ## Parte II - Implementando Interfaces
@@ -95,7 +107,7 @@ Clase Cube
 
 ## Parte IV - Interfaces Implementando en un contexto
 
-
+![img_20.png](img_20.png)
 
  
 ## Parte V - Interfaces Integrando
